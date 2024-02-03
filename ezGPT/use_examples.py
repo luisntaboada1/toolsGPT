@@ -1,6 +1,6 @@
 import functions
 
-chat_history = history = [{"role": "system", "content": "You are a helpful assistant."}]
+history = [{"role": "system", "content": "You are a helpful assistant."}]
 
 while True: 
     message = input('Input: ')
