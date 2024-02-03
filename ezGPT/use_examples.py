@@ -6,4 +6,4 @@ while True:
     message = input('Input: ')
     functions.basic_chat(message, history, "gpt-3.5-turbo")
     chat_history = functions.basic_chat
-    continue
+ 
