@@ -16,12 +16,9 @@ def basic_chat(user_input, chat_history, gpt_model):
     )
 
     chat_history.append({"role": "assistant", "content": completion.choices[0].message.content})
-    print(completion.choices[0].message.content)
-    print('----------------------------------------')
+    return_completion = completion.choices[0].message.content
     return_history = chat_history
-    #print(chat_history)
-    #print('----------------------------------------')
-    return return_history
+    return_list = [return_history, return_completion]
 
-
+    return return_list
 
