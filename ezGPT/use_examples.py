@@ -1,5 +1,4 @@
 import functions
-from functions import chat_history
 
 chat_history = history = [{"role": "system", "content": "You are a helpful assistant."}]
 
