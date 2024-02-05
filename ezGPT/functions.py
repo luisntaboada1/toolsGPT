@@ -16,9 +16,12 @@ def basic_chat(user_input, chat_history, gpt_model):
     )
 
     chat_history.append({"role": "assistant", "content": completion.choices[0].message.content})
+    
     return_completion = completion.choices[0].message.content
     return_history = chat_history
-    return_list = [return_history, return_completion]
+    prompt_tokens = completion.usage.prompt_tokens
+    completion_tokens = completion.usage.completion_tokens
+    total_tokens = completion.usage.total_tokens
+    return_list = [return_history, return_completion, prompt_tokens, completion_tokens, total_tokens]
 
     return return_list
-
